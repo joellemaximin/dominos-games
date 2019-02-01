@@ -1,0 +1,192 @@
+#starter_button_wrapper { text-align: center; margin-top: 50px }
+#starter_button_wrapper button { font-size: 110%; padding: 10px; }
+#started_game { display: none; }
+
+.domino {
+  /* zoom: 1.5; */
+  width: 100px;
+  height: 50px;
+  border: 1px solid #ccc;
+  background: #ede6d0;
+  border-radius: 5px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.domino > .side {
+  position: relative;
+  width: 45px;
+  height: 42px;
+  float: left;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 4px;
+  display: grid;
+  /* background: red; */
+}
+
+.domino > .divider {
+  position: relative;
+  margin-top: 6px;
+  width: 2px;
+  height: 40px;
+  background: black;
+  float: left;
+}
+
+.domino > .side .dotw {
+  display: grid;
+}
+
+.domino > .side .dot {
+  background: black;
+  border-radius: 6px;
+  width: 8px;
+  height: 8px;
+  margin: auto;
+}
+
+.domino > .side[data-side-count="1"] .dotw:nth-child(1) {
+  margin: auto;
+}
+
+.domino > .side[data-side-count="2"] {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+.domino > .side[data-side-count="2"] .dotw {
+  /* background: green; */
+}
+.domino > .side[data-side-count="2"] .dotw:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.domino > .side[data-side-count="3"] {
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+}
+.domino > .side[data-side-count="3"] .dotw {
+  /* background: blue; */
+}
+.domino > .side[data-side-count="3"] .dotw:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.domino > .side[data-side-count="3"] .dotw:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.domino > .side[data-side-count="4"] {
+  grid-template-columns: 50% 50%;
+}
+.domino > .side[data-side-count="4"] .dotw {
+  /* background: red; */
+}
+
+.domino > .side[data-side-count="5"] {
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+}
+.domino > .side[data-side-count="5"] .dotw {
+  /* background: purple; */
+}
+.domino > .side[data-side-count="5"] .dotw:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.domino > .side[data-side-count="5"] .dotw:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.domino > .side[data-side-count="5"] .dotw:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+.domino > .side[data-side-count="5"] .dotw:nth-child(5) {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+.domino > .side[data-side-count="6"] {
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50%;
+}
+.domino > .side[data-side-count="6"] .dotw {
+  /* background: magenta; */
+}
+.domino > .side[data-side-count="6"] .dotw:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.domino > .side[data-side-count="6"] .dotw:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.domino > .side[data-side-count="6"] .dotw:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.domino > .side[data-side-count="6"] .dotw:nth-child(5) {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.domino > .side[data-side-count="6"] .dotw:nth-child(6) {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.name{
+  padding: 13px 19px;
+}
+.board > .player {
+  display: inline-flex;
+  margin-top: 20px;
+  margin-left: 16px;
+}
+.domino{
+  cursor: pointer;
+}  
+
+
+.dominoes.rotate90 .dot{
+  transform: rotate(90deg) translateY(-100%);
+  -webkit-transform: rotate(90deg) translateY(-100%);
+  -ms-transform: rotate(90deg) translateY(-100%);
+}
+.dominoes.rotate180 .dot{
+  transform: rotate(180deg) translate(-100%, -100%);
+  -webkit-transform: rotate(180deg) translate(-100%, -100%);
+  -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+.dominoes.rotate270 {
+  transform: rotate(270deg) translateX(-100%);
+  -webkit-transform: rotate(270deg) translateX(-100%);
+  -ms-transform: rotate(270deg) translateX(-100%);
+}
